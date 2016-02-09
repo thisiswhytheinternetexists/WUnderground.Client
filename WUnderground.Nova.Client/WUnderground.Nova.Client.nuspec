@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>WUnderground Nova Client</title>
+    <authors>ThisIsWhyTheInternetExists</authors>
+    <owners>ThisIsWhyTheInternetExists</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library for WUnderground weather data API</description>
+    <releaseNotes>Initial commit with support for retrieving weather data using city name and country code.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>WUnderground Weather API</tags>
+  </metadata>
+</package>
