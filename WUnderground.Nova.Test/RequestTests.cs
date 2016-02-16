@@ -26,6 +26,13 @@ namespace WUnderground.Nova.Test
         }
 
         [TestMethod]
+        public void GetConditionsForPwsIdAsync()
+        {
+            WeatherResponse current_city = WUndergroundClient.GetConditionsForPersonalWeatherStationAsync("KCASANFR70").Result;
+            Assert.AreEqual(current_city.current_observation.display_location.full, "San Francisco, CA");
+        }
+
+        [TestMethod]
         public void GetConditionsAndForecastForLocationAsync()
         {
             //Get the weather forecast for the specified location

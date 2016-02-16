@@ -12,6 +12,7 @@ namespace WUnderground.Client
     {
         private const string GeolookupAndCurrentConditionsUri = "http://api.wunderground.com/api/{0}/geolookup/conditions/q/{1},{2}.json";
         private const string CityLookupAndCurrentConditionsUri = "http://api.wunderground.com/api/{0}/conditions/q/{1}/{2}.json";
+        private const string PersonalWeatherStationCurrentConditionsUri = "http://api.wunderground.com/api/{0}/conditions/q/pws:{1}.json";
         private const string GeolookupCurrentConditionsAndForecastUri = "http://api.wunderground.com/api/{0}/geolookup/conditions/forecast/q/{1},{2}.json";
         private const string GeolookupHourlyForecastUri = "http://api.wunderground.com/api/{0}/geolookup/hourly/q/{1},{2}.json";
         private const string GeolookupHistoryUri = "http://api.wunderground.com/api/{0}/conditions/{3}/geolookup/q/{1},{2}.json";
@@ -31,6 +32,16 @@ namespace WUnderground.Client
         public static async Task<WeatherResponse> GetConditionsForCityAsync(string city, string countrycode)
         {
             Uri m_uri = new Uri(string.Format(CityLookupAndCurrentConditionsUri, Config.ApiKey, countrycode, city));
+            return await GetResponse(m_uri);
+        }
+
+        /// <summary>
+        /// Gets the current conditions for the specified Personal Weather Station ID
+        /// </summary>
+        /// <param name="pws_id">The ID of the Personal Weather Station. DO NOT PREFIX WITH pws:!</param>
+        /// <returns></returns>
+        public static async Task<WeatherResponse> GetConditionsForPersonalWeatherStationAsync(string pws_id) {
+            Uri m_uri = new Uri(string.Format(PersonalWeatherStationCurrentConditionsUri, Config.ApiKey, pws_id));
             return await GetResponse(m_uri);
         }
 
