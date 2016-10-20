@@ -28,7 +28,7 @@ namespace WUnderground.Nova.Test
         [TestMethod]
         public void GetConditionsForPwsIdAsync()
         {
-            WeatherResponse current_city = WUndergroundClient.GetConditionsForPersonalWeatherStationAsync("KCASANFR70").Result;
+            WeatherResponse current_city = WUndergroundClient.GetConditionsForPersonalWeatherStationAsync("IKOUDEKE10").Result;
             Assert.AreEqual(current_city.current_observation.display_location.full, "San Francisco, CA");
         }
 
