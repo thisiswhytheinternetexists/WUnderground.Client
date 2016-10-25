@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ThisIsWhyTheInternetExists.WUnderground.Nova.Core</id>
+    <version>2.0.1.0</version>
+    <title>WUnderground Nova Client (.NET Core)</title>
+    <authors>ThisIsWhyTheInternetExists</authors>
+    <owners>ThisIsWhyTheInternetExists</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library for WUnderground weather data API using .NET Core</description>
+    <releaseNotes>First release of a .NET Core compatible version of the library.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>WUnderground Weather API</tags>
+  </metadata>
+</package>
